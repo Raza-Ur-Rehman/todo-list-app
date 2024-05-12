@@ -16,6 +16,11 @@ html,body {
     height: 100vh;
     width: 800px;
 }
+.hero {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
 .hero h2 {
     text-align: center;
     font-size: 30px;
@@ -30,8 +35,19 @@ html,body {
     width: 600px;
     height: 40px;
     outline: none;
-    border: 1px solid purple;
+    border: none;
+    border-bottom: 1.5px solid purple;
+    padding-left: 8px;
+    font-size: 18px;
+}
+.user_input ::placeholder {
+    color: rgba(107, 1, 107, 0.61);
 }
 .user_input button {
-    padding: 10px 30px;
+    padding: 8px 30px;
+    border: 2px solid purple;
+    outline: none;
+    color: purple;
+    font-size: 18px;
+    border-radius: 20px;
 }
