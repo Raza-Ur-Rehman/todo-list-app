@@ -1,108 +1,115 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-html,body {
-    height: 100vh;
-    background-color: #252525;
-    display: flex;
-    justify-content: center;
+html,
+body {
+  height: 100vh;
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
 }
 .box {
-    background-color: #dfe6e9;
-    height: 100vh;
-    width: 800px;
-    /* padding: 20px; */
+  background-color: #dfe6e9;
+  height: 100vh;
+  width: 800px;
+  /* padding: 20px; */
 }
 .hero {
-    display: flex;
-    padding: 20px;
-    padding-bottom: 40px;
-    gap: 20px;
-    flex-direction: column;
-    border-bottom: 0.5px solid #25252580;
+  display: flex;
+  padding: 20px;
+  padding-bottom: 40px;
+  gap: 20px;
+  flex-direction: column;
+  /* border-bottom: 0.5px solid #25252580; */
 }
 .hero h2 {
-    text-align: center;
-    font-size: 30px;
-    color: #252525;
+  text-align: center;
+  font-size: 30px;
+  color: #252525;
 }
 .user-input {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 .user-input input {
-    width: 600px;
-    height: 40px;
-    outline: none;
-    border: none;
-    border-bottom: 1.5px solid purple;
-    padding-left: 8px;
-    font-size: 18px;
-    background-color: transparent;
+  width: 600px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid purple;
+  padding-left: 8px;
+  font-size: 18px;
+  background-color: transparent;
 }
 .user-input ::placeholder {
-    color: rgba(107, 1, 107, 0.61);
+  color: rgba(107, 1, 107, 0.61);
 }
 .user-input button {
-    padding: 8px 30px;
-    border: 2px solid purple;
-    outline: none;
-    color: purple;
-    font-size: 18px;
-    border-radius: 20px;
-    cursor: pointer;
-    background-color: transparent;
+  padding: 8px 30px;
+  border: 2px solid purple;
+  outline: none;
+  color: purple;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: transparent;
 }
 .main {
-    /* background-color: blueviolet; */
-    padding: 20px;
+  /* background-color: blueviolet; */
+  padding: 20px;
 }
 .list {
-    /* background-color: blue; */
-    display: none;
-    justify-content: space-between;
-    padding: 10px 20px;
-    text-align: center;
-    border: 0.5px solid purple;
-    border-radius: 22px;
-
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  text-align: center;
+  border: 0.5px solid purple;
+  border-radius: 22px;
 }
 .user-task {
-    font-size: 22px;
-    gap: 20px;
-    display: flex;
+  font-size: 22px;
+  gap: 20px;
+  display: flex;
 }
-.user-task label {
+.user-task ul li {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
     display: flex;
     gap: 15px;
     color: purple;
     text-transform: capitalize;
 }
-.user-task label input {
-    outline: none;
-    cursor: pointer;
-    width: 18px;
-    accent-color: blueviolet;
-    border-color: purple;
-    background-color: transparent;
+.user-task input {
+  outline: none;
+  cursor: pointer;
+  width: 18px;
+  accent-color: blueviolet;
+  border-color: purple;
+  background-color: transparent;
 }
-.user-task label input:checked ~ .checkmark {
-    color: #25252575 ;
-    text-decoration: line-through;
-  }
-.task-icon {
-    font-size: 20px;
-    gap: 20px;
-    display: flex;
-    color: rgba(128, 0, 128, 0.377);
-    cursor: pointer;
-    
+.user-task input:checked ~ .checkmark {
+  color: #25252575;
+  text-decoration: line-through;
 }
-.task-icon :hover {
-    color: purple;
+.icons {
+  font-size: 20px;
+  gap: 20px;
+  display: flex;
+  color: rgba(128, 0, 128, 0.377);
+  cursor: pointer;
+}
+.icons :hover {
+  color: purple;
+}
+.icons :last-child {
+  color: rgba(255, 0, 0, 0.438);
+}
+.icons :last-child:hover {
+  color: red;
 }
