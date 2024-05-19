@@ -1,5 +1,6 @@
 let inputs = document.getElementById("userinput");
-let todoList = document.getElementById("user-task");
+let todoList = document.getElementById("list");
+// let date = newDate();
 
 function addTask () {
   if (inputs.value === "") {
@@ -7,38 +8,43 @@ function addTask () {
     
   } else {
     let liElement = document.createElement ("li");
-    let pElement = document.createElement ("task");
+    let pElement = document.createElement ("p");
+    pElement.className = 'checkmark'
     pElement.innerHTML = inputs.value;
     pElement.style.background = "none";
+    liElement.appendChild(pElement);
+    
+    //  create  Edit icon
+    let editbtn = document.createElement("i");
+    editbtn.classList.add("fa-solid", "fa-pen", "editbtn");
+    liElement.appendChild(editbtn);
+    editbtn.setAttribute("onclick", "updateTask(this)");
+    
+  //  create Delete btn
+   let deletebtn = document.createElement("i");
+   deletebtn.classList.add("fa-solid", "fa-trash", "deletebtn");
+    liElement.appendChild(deletebtn);
+    deletebtn.setAttribute("onclick","deleteTask(this)");
+
+    // final adding listitem in todolist 
+    todoList.appendChild(liElement);
+    inputs.value = "";
+
+
+
+
+
+
+
+
+    // console.log(deletebtn);
+    
+    
+    
   }
 }
 
 
-
-
-
-
-
-
-
-
-// let inputs = document.getElementById("inputbox");
-// let todoList = document.getElementById("list-text");
-
-// function add() {
-//   // if input is equal to null means no text then show alert
-//   if (inputs.value == "") {
-//     alert("Please enter a task");
-//   } else {
-//     // Created list
-//     let liElement = document.createElement("li");
-//     // This code create paragraph
-//     let newElementP = document.getElementById("task");
-//     // inside paragraph getting the value of inputs
-//     newElementP.innerHTML = inputs.value;
-//     newElementP.style.background = "none";
-//     // this code will add paragraph inside list
-//     liElement.appendChild(newElementP);
 
 //     // Created editIcon
 //     let editbtn = document.createElement("icons");
