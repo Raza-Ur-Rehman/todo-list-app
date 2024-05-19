@@ -1,23 +1,26 @@
-let userInput = document.querySelector("#userinput");
-let userTask = document.querySelector("#user-task");
-function addtask() {
-  if (userInput.value == "") {
-    alert("Please Enter a Task");
-  } else {
-    let liElement = document.createElement("li");
-    let newTaskP = document.createElement("p");
-    newTaskP.innerHTML = userInput.value;
-    newTaskP.style.background = "none";
-    liElement.appendChild(newTaskP);
+let inputs = document.getElementById("userinput");
+let todoList = document.getElementById("user-task");
 
-    let editbtn = document.createElement("editbtn");
-    editbtn.classList.add("fa-solid", "fa-pen-to-square", "edit");
-    liElement.appendChild(editbtn);
-    editbtn.setAttribute("onclick", "updateTask(this)");
+function addTask () {
+  if (inputs.value === "") {
+    alert("Please Enter a Task");
+    
+  } else {
+    let liElement = document.createElement ("li");
+    let pElement = document.createElement ("task");
+    pElement.innerHTML = inputs.value;
+    pElement.style.background = "none";
   }
 }
 
-console.log(editbtn.classList.add());
+
+
+
+
+
+
+
+
 
 // let inputs = document.getElementById("inputbox");
 // let todoList = document.getElementById("list-text");
