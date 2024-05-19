@@ -2,18 +2,18 @@ let inputs = document.getElementById("userinput");
 let todoList = document.getElementById("task");
 // let date = newDate();
 
-function addTask() {
+function addtask() {
   if (inputs.value === "") {
     alert("Please Enter a Task");
   } else {
     let liElement = document.createElement("li");
-    let checkboxinput = document.createElement("input");
+    // let checkboxinput = document.createElement("input");
     let pElement = document.createElement("p");
-    checkboxinput.type = "checkbox";
+    // checkboxinput.type = "checkbox";
     pElement.className = "checkmark";
     pElement.innerHTML = inputs.value;
     pElement.style.background = "none";
-    liElement.appendChild(checkboxinput);
+    // liElement.appendChild(checkboxinput);
     liElement.appendChild(pElement);
     //  create  Edit icon
     let editbtn = document.createElement("i");
