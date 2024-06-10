@@ -47,6 +47,7 @@ body {
 }
 .user-input ::placeholder {
   color: rgba(107, 1, 107, 0.61);
+  font-size: 20px;
 }
 .user-input button {
   padding: 8px 30px;
@@ -66,24 +67,53 @@ body {
   /* background-color: blue; */
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 20px 20px;
   text-align: center;
   border: 0.5px solid purple;
   border-radius: 22px;
 }
+.list ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 .list ul li {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
     display: flex;
     gap: 15px;
     color: purple;
     text-transform: capitalize;
 }
-.chackbox {
+.container {
+  cursor: pointer;
+}
+
+.container input {
+  display: none;
+}
+
+.container svg {
+  overflow: visible;
+}
+
+.path {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+
+.container input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+}
+/* .chackbox {
   outline: none;
   cursor: pointer;
-  width: 18px;
+  width: 24px;
   accent-color: blueviolet;
   border-color: purple;
   background-color: transparent;
@@ -91,11 +121,14 @@ body {
 .chackbox:checked ~ .checkmark {
   color: #25252575;
   text-decoration: line-through;
+} */
+#edit-input {
+
 }
 .icons {
-  font-size: 20px;
-  gap: 20px;
-  display: flex;
+  font-size: 24px;
+  /* display: flex;
+  gap: 20px; */
   color: rgba(128, 0, 128, 0.377);
   cursor: pointer;
 }
