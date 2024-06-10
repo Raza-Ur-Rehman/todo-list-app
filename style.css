@@ -68,15 +68,10 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   text-align: center;
-  /* border: 0.5px solid purple; */
+  border: 0.5px solid purple;
   border-radius: 22px;
 }
-.user-task {
-  font-size: 22px;
-  gap: 20px;
-  display: flex;
-}
-.user-task ul li {
+.list ul li {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -85,7 +80,7 @@ body {
     color: purple;
     text-transform: capitalize;
 }
-.user-task input {
+.chackbox {
   outline: none;
   cursor: pointer;
   width: 18px;
@@ -93,7 +88,7 @@ body {
   border-color: purple;
   background-color: transparent;
 }
-.user-task input:checked ~ .checkmark {
+.chackbox:checked ~ .checkmark {
   color: #25252575;
   text-decoration: line-through;
 }
